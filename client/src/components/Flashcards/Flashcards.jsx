@@ -1,65 +1,14 @@
 import "./Flashcards.css";
 import Loader from "../Loader/Loader";
 import Flashcard from "./Flashcard";
-import jsPDF from "jspdf";
 
 function Flashcards({
 
 flashcards,
 
-setFlashcards,
-
-setNotes
+loading
 
 }) {
-    const copyCards=()=>{
-
-const text=flashcards.map(
-
-card=>
-
-`Q: ${card.question}
-
-A: ${card.answer}
-
-`
-
-).join("\n");
-
-navigator.clipboard.writeText(text);
-
-}
-const downloadPDF=()=>{
-
-const doc=new jsPDF();
-
-flashcards.forEach((card,index)=>{
-
-doc.text(
-
-`${index+1}. ${card.question}`,
-
-10,
-
-20+index*30
-
-);
-
-doc.text(
-
-card.answer,
-
-10,
-
-28+index*30
-
-);
-
-});
-
-doc.save("flashcards.pdf");
-
-}
 
     return (
 
@@ -71,31 +20,10 @@ doc.save("flashcards.pdf");
                     📚 Your Flashcards
                 </h2>
 
-                <button
+                <button>
+                    Clear All
+                </button>
 
-onClick={()=>{
-
-setFlashcards([]);
-
-setNotes("");
-
-}}
-
->
-
-Clear All
-
-</button>
-<button onClick={copyCards}>
-
-Copy All
-
-</button>
-<button>
-
-Download PDF
-
-</button>
             </div>
 
             <div className="cards-grid">
