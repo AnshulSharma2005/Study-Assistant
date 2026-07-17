@@ -107,13 +107,15 @@ const handleGenerate = async () => {
 
             </div>
 
-            <Flashcards
+           <Flashcards
 
-                flashcards={flashcards}
+    flashcards={flashcards}
 
-                loading={loading}
+    setFlashcards={setFlashcards}
 
-            />
+    setNotes={setNotes}
+
+/>
 
         </>
 

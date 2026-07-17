@@ -43,3 +43,14 @@ select{
 ::-webkit-scrollbar-track{
     background:#09090F;
 }
+.dark-theme{
+    background:#07090f;
+    color:white;
+    min-height :100vh;
+}
+
+.light-theme{
+    background:#f5f7fb;
+    color:#111;
+    min-height :100vh;
+}

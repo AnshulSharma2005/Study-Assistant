@@ -17,12 +17,11 @@ function Navbar(){
 
             </div>
 
-            <button className="theme-btn">
-
-                <FaMoon/>
-
-                <span>Dark</span>
-
+            <button
+                className="theme-btn"
+                onClick={() => setDarkMode(!darkMode)}
+            >
+                {darkMode ? "🌙 Dark" : "☀️ Light"}
             </button>
 
         </nav>
