@@ -1,9 +1,5 @@
 import axios from "axios";
 
-const API = axios.create({
-
-    baseURL: "http://localhost:5000/api"
-
-});
+const API = "https://ai-study-assistant-backend-yhcl.onrender.com";
 
 export default API;
