@@ -1,0 +1,57 @@
+.tips-card{
+
+    flex:1;
+
+    background:#111827;
+
+    border-radius:24px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:30px;
+
+}
+
+.tips-card h2{
+
+    margin-bottom:30px;
+
+    font-size:22px;
+
+}
+
+.tip{
+
+    display:flex;
+
+    gap:16px;
+
+    margin-bottom:28px;
+
+}
+
+.tip svg{
+
+    color:#A855F7;
+
+    font-size:22px;
+
+    margin-top:4px;
+
+}
+
+.tip h4{
+
+    margin-bottom:5px;
+
+}
+
+.tip p{
+
+    color:#A1A1AA;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}

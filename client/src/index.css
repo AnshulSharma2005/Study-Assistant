@@ -1,0 +1,45 @@
+@import "@fontsource/poppins";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#09090F;
+    color:white;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+input,
+textarea,
+select{
+    font-family:inherit;
+}
+
+::-webkit-scrollbar{
+    width :8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#7C3AED;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#09090F;
+}
