@@ -48,8 +48,7 @@ const handleGenerate = async () => {
 
         setLoading(true);
 
-        const response = await API.post("/generate", {
-
+const response = await API.post("/api/generate", {
             notes,
 
             flashcardCount,
