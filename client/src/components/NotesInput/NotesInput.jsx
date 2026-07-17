@@ -34,6 +34,23 @@ The Virtual DOM improves performance by updating only changed elements.`
 )
 
 } 
+const handleFile = (e) => {
+
+    const file = e.target.files[0];
+
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = () => {
+
+        setNotes(reader.result);
+
+    };
+
+    reader.readAsText(file);
+
+};
 
     return (
         
@@ -66,6 +83,15 @@ The Virtual DOM improves performance by updating only changed elements.`
 
             </div>
 
+            <input
+
+                type="file"
+
+                accept=".txt"
+
+                onChange={handleFile}
+
+            />
            <textarea
 
                 value={notes}
@@ -156,11 +182,11 @@ The Virtual DOM improves performance by updating only changed elements.`
 
                     {
 
-                        loading
+                       loading
 
                         ?
 
-                        "Generating..."
+                        "✨ AI is creating flashcards..."
 
                         :
 
@@ -174,7 +200,7 @@ The Virtual DOM improves performance by updating only changed elements.`
 
             <p className="powered">
 
-                ✨ Powered by Gemini AI
+                ✨ Powered by AI
 
             </p>
 

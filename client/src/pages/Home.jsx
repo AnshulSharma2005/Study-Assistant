@@ -5,6 +5,7 @@ import NotesInput from "../components/NotesInput/NotesInput";
 import TipsCard from "../components/TipsCard/TipsCard";
 import Flashcards from "../components/Flashcards/Flashcards";
 import API from "../services/api";
+import toast from "react-hot-toast";
 
 import "./Home.css";
 
@@ -57,7 +58,9 @@ const response = await API.post("/api/generate", {
 
         });
 
-        setFlashcards(response.data);
+       setFlashcards(response.data);
+
+toast.success("Flashcards generated successfully!");
 
     }
 
@@ -65,7 +68,7 @@ const response = await API.post("/api/generate", {
 
         console.log(err);
 
-        alert("Generation Failed");
+        toast.error("Failed to generate flashcards.");
 
     }
 
@@ -108,12 +111,17 @@ const response = await API.post("/api/generate", {
 
             <Flashcards
 
-                flashcards={flashcards}
+    flashcards={flashcards}
 
-                loading={loading}
+    loading={loading}
 
-            />
+    setFlashcards={setFlashcards}
 
+    setNotes={setNotes}
+
+    handleGenerate={handleGenerate}
+
+/>
         </>
 
     );
