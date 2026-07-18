@@ -10,8 +10,8 @@ function Hero() {
 
                 <h1>
 
-                    Hello,
-                    <span> Anshul! 👋</span>
+                    Welcome Learner!
+                    <span>👋</span>
 
                 </h1>
 

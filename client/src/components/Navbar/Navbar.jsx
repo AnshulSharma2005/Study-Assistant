@@ -19,9 +19,7 @@ function Navbar(){
 
             <button className="theme-btn">
 
-                <FaMoon/>
-
-                <span>Dark</span>
+                <span>✨ AI Powered</span>
 
             </button>
 

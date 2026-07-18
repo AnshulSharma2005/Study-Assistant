@@ -77,7 +77,7 @@ const handleFile = (e) => {
 
                 <button className="example-btn" onClick={loadExample}>
 
-                    Example
+                    <FaMagic/> Example
 
                 </button>
 
@@ -200,7 +200,7 @@ const handleFile = (e) => {
 
             <p className="powered">
 
-                ✨ Powered by AI
+                ✨ AI Flashcards in Seconds
 
             </p>
 

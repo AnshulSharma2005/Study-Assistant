@@ -20,7 +20,7 @@
 
     align-items:flex-start;
 
-    margin-bottom:25px;
+    margin-bottom :25px;
 
 }
 
@@ -46,7 +46,7 @@
 
     color:#A1A1AA;
 
-    margin-top:8px;
+    margin-top :8px;
 
 }
 
@@ -78,9 +78,9 @@
 
 textarea{
 
-    width:100%;
+    width :100%;
 
-    height:220px;
+    height :220px;
 
     resize:none;
 
@@ -98,7 +98,7 @@ textarea{
 
     font-size:16px;
 
-    margin-bottom:25px;
+    margin-bottom :25px;
 
 }
 
@@ -114,7 +114,13 @@ textarea::placeholder{
 
     justify-content:space-between;
 
-    align-items:end;
+    align-items:flex-end;
+
+    gap:30px;
+
+    margin-top :25px;
+
+    flex-wrap:wrap;
 
 }
 
@@ -122,7 +128,9 @@ textarea::placeholder{
 
     display:flex;
 
-    gap:25px;
+    gap:28px;
+
+    flex-wrap:wrap;
 
 }
 
@@ -130,7 +138,7 @@ textarea::placeholder{
 
     display:block;
 
-    margin-bottom:8px;
+    margin-bottom :8px;
 
     font-size:14px;
 
@@ -174,6 +182,8 @@ select{
 
     transition:.3s;
 
+    margin-left :auto;
+
 }
 
 .generate-btn:hover{
@@ -186,22 +196,22 @@ select{
 
 .powered{
 
-    text-align:right;
+    text-align :right;
 
     color:#A1A1AA;
 
-    margin-top:18px;
+    margin-top :18px;
 
 }
 .character-counter{
 
-    text-align:right;
-
+    text-align :right;
+ 
     color:#8B8B8B;
 
-    margin-top:10px;
+    margin-top :10px;
 
-    margin-bottom:20px;
+    margin-bottom :20px;
 
 }
 .disabled{
