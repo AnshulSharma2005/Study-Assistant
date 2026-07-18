@@ -225,3 +225,53 @@ transform:none !important;
 box-shadow:none !important;
 
 }
+
+.upload-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin:18px 0 20px;
+
+    flex-wrap:wrap;
+
+}
+
+.upload-btn{
+
+    background:transparent;
+
+    border:1px solid #7C3AED;
+
+    color:#C084FC;
+
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.upload-btn:hover{
+
+    background:#7C3AED;
+
+    color:white;
+
+}
+
+.upload-text{
+
+    color:#A1A1AA;
+
+    font-size:14px;
+
+}

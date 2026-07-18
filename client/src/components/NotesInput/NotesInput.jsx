@@ -1,5 +1,5 @@
 import "./NotesInput.css";
-
+import { useState } from "react";
 import { FaMagic } from "react-icons/fa";
 import { FaFileAlt } from "react-icons/fa";
 
@@ -21,36 +21,39 @@ setLoading,
 handleGenerate
 
 }) {
+    const [fileName, setFileName] = useState("");
     const loadExample=()=>{
 
-setNotes(
+        setNotes(
 
-`React is a JavaScript library used to build user interfaces.
+        `React is a JavaScript library used to build user interfaces.
 
-JSX lets developers write HTML inside JavaScript.
+        JSX lets developers write HTML inside JavaScript.
 
-The Virtual DOM improves performance by updating only changed elements.`
+        The Virtual DOM improves performance by updating only changed elements.`
 
-)
+        )
 
-} 
-const handleFile = (e) => {
+    } 
+        const handleFileUpload = (e) => {
 
-    const file = e.target.files[0];
+        const file = e.target.files[0];
 
-    if (!file) return;
+        if (!file) return;
 
-    const reader = new FileReader();
+        setFileName(file.name);
 
-    reader.onload = () => {
+        const reader = new FileReader();
 
-        setNotes(reader.result);
+        reader.onload = (event) => {
 
-    };
+            setNotes(event.target.result);
 
-    reader.readAsText(file);
+        };
 
-};
+        reader.readAsText(file);
+
+    }
 
     return (
         
@@ -83,15 +86,47 @@ const handleFile = (e) => {
 
             </div>
 
-            <input
+            <div className="upload-section">
 
-                type="file"
+                <label htmlFor="fileUpload" className="upload-btn">
 
-                accept=".txt"
+                    📄 Upload TXT File
 
-                onChange={handleFile}
+                </label>
 
-            />
+                <input
+
+                    id="fileUpload"
+
+                    type="file"
+
+                    accept=".txt,.md,.pdf"
+
+                    hidden
+
+                    onChange={handleFileUpload}
+
+                />
+
+                <span className="upload-text">
+
+                    {
+
+                        fileName
+
+                        ?
+
+                        `✅ ${fileName}`
+
+                        :
+
+                        "No file selected"
+
+                    }
+
+                </span>
+
+            </div>
            <textarea
 
                 value={notes}
@@ -209,5 +244,4 @@ const handleFile = (e) => {
     )
 
 }
-
 export default NotesInput;
